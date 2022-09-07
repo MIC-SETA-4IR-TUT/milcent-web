@@ -1,0 +1,22 @@
+{% extends "../layout.html" %}
+{% load static %}
+
+{% block content %}
+    {% include "../partials/header.html" %}
+
+    <div class="product-viewer flex">
+        <div class="product-viewer__main">
+            <div class="product-viewer__main__thumbnail image--back" style="background-image: url('/media/{{ product.thumbnail }}')"></div>
+            <div class="product-viewer__main__header">
+                <h1 class="product-viewer__main__header__name">{{ product.name }}</h1>
+                <p class="product-viewer__main__header__brand">{{ product.brand }}</p>
+                <h1 class="product-viewer__main__header__price">R{{ product.price }}</h1>
+                <a href="/product/{{ product.id }}/pay"><button class="btn">Buy now</button></a>
+            </div>
+            <div class="product-viewer__main__description">
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
+        <div class="product-viewer__right"></div>
+    </div>
+{% endblock  %}

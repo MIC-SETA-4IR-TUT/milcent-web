@@ -1,0 +1,21 @@
+.landing-header {
+  position: fixed;
+  top: 0;
+  height: 5rem;
+  padding: 0 3rem;
+  z-index: 3000;
+  background-color: #daeffb;
+  width: 100%;
+}
+.landing-header__left__logo h1 {
+  letter-spacing: 2px;
+}
+.landing-header__left__menu {
+  margin-left: 5rem;
+}
+.landing-header__left__menu__ul__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.landing-header__account p {
+  margin-right: 2rem;
+}

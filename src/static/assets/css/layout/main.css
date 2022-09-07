@@ -1,0 +1,47 @@
+.landing-header {
+  position: fixed;
+  top: 0;
+  height: 5rem;
+  padding: 0 3rem;
+  z-index: 3000;
+  background-color: #daeffb;
+  width: 100%;
+}
+.landing-header__left__logo h1 {
+  letter-spacing: 2px;
+}
+.landing-header__left__menu {
+  margin-left: 5rem;
+}
+.landing-header__left__menu__ul__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.landing-header__account p {
+  margin-right: 2rem;
+}
+.admin-nav {
+  padding: 0rem 3rem 2rem 3rem;
+  border-bottom: 1px solid #eee;
+}
+.admin-nav ul li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.container__main {
+  padding-top: 5rem;
+}
+.container__main--nav-closed {
+  margin-left: 5rem;
+}
+.container__main__title {
+  padding: 0.7rem 3rem;
+}
+.container__main__title h1 {
+  font-size: 2.6rem;
+  margin-bottom: 2px;
+}
+.container__main__focus {
+  margin: 2rem;
+}
+.container__main__center {
+  margin: 5rem 10%;
+}

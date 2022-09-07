@@ -1,0 +1,16 @@
+.logger {
+  width: 35rem;
+  margin: 15rem auto;
+}
+.logger--register {
+  margin-top: 11rem;
+}
+.logger__form p {
+  margin-bottom: 3rem;
+}
+.logger__form .input-wrapper:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.logger__form button {
+  margin-top: 2rem;
+}

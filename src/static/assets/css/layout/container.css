@@ -1,0 +1,19 @@
+.container__main {
+  padding-top: 5rem;
+}
+.container__main--nav-closed {
+  margin-left: 5rem;
+}
+.container__main__title {
+  padding: 0.7rem 3rem;
+}
+.container__main__title h1 {
+  font-size: 2.6rem;
+  margin-bottom: 2px;
+}
+.container__main__focus {
+  margin: 2rem;
+}
+.container__main__center {
+  margin: 5rem 10%;
+}

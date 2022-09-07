@@ -1,0 +1,73 @@
+{% extends "../layout.html" %}
+{% load static %}
+
+{% block content %}
+    {% include "../partials/header.html" %}
+
+    <form hidden>
+        {% csrf_token %}
+    </form>
+
+    <div class="showcase flex flex--j-space-between">
+        <div class="showcase__caption">
+            <h1 class="flex">
+                <span>Browse.</span>
+                <span>Like.</span>
+                <span>Buy.</span>
+            </h1>
+        </div>
+        <div class="showcase__img1 image--back" style="background-image: url('/static/assets/images/chick-g28be90a97_1920.jpg');"></div>
+        <div class="showcase__img2 image--back" style="background-image: url('/static/assets/images/chicken-ge98022ff5_1920.jpg');"></div>
+        <div class="showcase__img3 image--back" style="background-image: url('/static/assets/images/chickens-gd557286de_1920.jpg');"></div>
+        {% comment %} <div class="showcase__search pos--abs flex">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Search">
+            </div>
+            <button class="btn">Next</button>
+        </div> {% endcomment %}
+    </div>
+    <div class="landing-heading">
+        <h1>Sold chickens</h1>
+        <p>We sell a great selection of chickens</p>
+    </div>
+    <div class="landing-list flex flex--j-space-between">
+        {% for lastestChicken in lastestChickens %}
+            <div class="landing-list__item">
+                <div class="landing-list__item__background image--back" style="background-image: url('/media/{{ lastestChicken.thumbnail }}')"></div>
+                <div class="landing-list__item__details flex flex--a-center">
+                    <h1>{{ lastestChicken.name }}</h1>
+                    <h4>R{{ lastestChicken.price }}</h4>
+
+                    <div class="flex flex--a-center" style="margin-top: 1rem;">
+                        <button class="btn add-to-cart" style="margin-right: 1rem;" data-cartproduct="{{lastestChicken.id}}">Add to cart</button>
+                        <p>Buy now</p>
+                    </div>
+
+                    <p style="margin-top: 1rem; text-align: center;">View</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="landing-heading">
+        <h1>Sold equipment</h1>
+        <p>We sell a great selection of equipment</p>
+    </div>
+    <div class="landing-list flex flex--j-space-between">
+        {% for lastestEquipment in lastestEquipments %}
+            <div class="landing-list__item">
+                <div class="landing-list__item__background image--back" style="background-image: url('/media/{{ lastestEquipment.thumbnail }}')"></div>
+                <div class="landing-list__item__details flex">
+                    <h1>{{ lastestEquipment.name }}</h1>
+                    <h4>R{{ lastestEquipment.price }}</h4>
+
+                    <div class="flex flex--a-center" style="margin-top: 1rem;">
+                        <button class="btn add-to-cart" style="margin-right: 1rem;" data-cartproduct="{{lastestEquipment.id}}">Add to cart</button>
+                        <p>Buy now</p>
+                    </div>
+
+                    <p style="margin-top: 1rem; text-align: center;">View</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

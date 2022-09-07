@@ -1,0 +1,32 @@
+{% extends "../layout.html" %}
+
+{% block content %}
+    <div class="logger logger--register">
+        <form action="/register" method="POST" class="logger__form">{% csrf_token %}
+            <h1>Sign up</h1>
+            <p>Sign up to make purchases.</p>
+
+            <div class="input-wrapper">
+                <input type="text" name="customer-first-name" placeholder="First name">
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="customer-last-name" placeholder="Last name">
+            </div>
+
+            <div class="input-wrapper">
+                <input type="email" name="customer-email" placeholder="Email address">
+            </div> 
+
+            <div class="input-wrapper">
+                <input type="password" name="customer-password" placeholder="Password">
+            </div>
+
+            <div class="input-wrapper">
+                <input type="password" name="customer-password-con" placeholder="Password confirmation">
+            </div>
+
+            <button class="btn">Sign up</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "../layout.html" %}
+
+{% block content %}
+    <div class="logger">
+        <form action="/login" method="POST" class="logger__form">{% csrf_token %}
+            <h1>Sign in</h1>
+            <p>Sign to make purchases.</p>
+
+            {% if error %}
+                {{error}}
+            {% endif %}
+
+            <div class="input-wrapper">
+                <input type="text" name="customer-email" placeholder="Email address">
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="customer-password" placeholder="Password">
+            </div>
+
+            <button class="btn">Sign in</button>
+        </form>
+    </div>
+{% endblock %}

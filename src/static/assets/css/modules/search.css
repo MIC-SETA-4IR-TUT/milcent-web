@@ -1,0 +1,7 @@
+.search__filter__item:not(:last-child) {
+  margin-right: 1rem;
+}
+.search__box {
+  flex: 0 0 30rem;
+  margin-right: 2rem;
+}
